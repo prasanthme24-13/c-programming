@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a[] = {5, -3, 0, 7, -1, 0, 4};
+    int n = 7;
+    int pos = 0, neg = 0, zero = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] > 0)
+            pos++;
+        else if (a[i] < 0)
+            neg++;
+        else
+            zero++;
+    }
+
+    printf("Positive numbers: %d\n", pos);
+    printf("Negative numbers: %d\n", neg);
+    printf("Zeroes: %d\n", zero);
+
+    return 0;
+}

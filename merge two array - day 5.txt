@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a[] = {1, 2, 3};
+    int b[] = {4, 5, 6};
+    int c[6]; // merged array
+    int i;
+
+    // Copy elements of a[] to c[]
+    for (i = 0; i < 3; i++)
+        c[i] = a[i];
+
+    // Copy elements of b[] to c[]
+    for (int j = 0; j < 3; j++)
+        c[i++] = b[j];
+
+    // Print merged array
+    for (i = 0; i < 6; i++)
+        printf("%d ", c[i]);
+
+    return 0;
+}
