@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[200];
+    int i = 0, wordCount = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Reads full line including spaces
+
+    while (str[i] != '\0') {
+        // Check if current character is not a space and next is space or end
+        if (!isspace(str[i]) && (isspace(str[i + 1]) || str[i + 1] == '\0')) {
+            wordCount++;
+        }
+        i++;
+    }
+
+    printf("Total number of words: %d\n", wordCount);
+
+    return 0;
+}

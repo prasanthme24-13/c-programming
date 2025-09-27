@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Reads full line including spaces
+
+    // Convert to uppercase
+    printf("Uppercase: ");
+    for (int i = 0; str[i] != '\0'; i++) {
+        putchar(toupper(str[i]));
+    }
+
+    // Convert to lowercase
+    printf("\nLowercase: ");
+    for (int i = 0; str[i] != '\0'; i++) {
+        putchar(tolower(str[i]));
+    }
+
+    return 0;
+}
